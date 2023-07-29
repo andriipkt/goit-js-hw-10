@@ -29,9 +29,14 @@ fetchBreeds()
   })
   .catch(error => {
     console.error('Error fetching breeds:', error);
-    showError();
+    // showError();
     hideLoader();
-    Notiflix.Notify.failure('Error fetching breeds');
+    Notiflix.Report.failure(
+      'Error',
+      'Oops! Something went wrong! Try reloading the page!',
+      'Close'
+    );
+    // Notiflix.Notify.failure('Error fetching breeds');
   });
 
 let isLoading = false;
@@ -53,9 +58,10 @@ function hideLoader() {
   isLoading = false;
 }
 
-function showError() {
-  error.style.display = 'block';
-}
+// function showError() {
+//   error.style.display = 'block';
+// }
+error.style.display = 'none';
 
 function populateBreedsSelect(breeds) {
   const elements = breeds.map(breed => {
@@ -122,9 +128,14 @@ function handleBreedChange() {
       })
       .catch(error => {
         console.error('Error fetching cat:', error);
-        showError();
+        Notiflix.Report.failure(
+          'Error',
+          'Oops! Something went wrong! Try reloading the page!',
+          'Close'
+        );
+        // showError();
         hideLoader();
-        Notiflix.Notify.failure('Error fetching breeds');
+        // Notiflix.Notify.failure('Error fetching breeds');
       });
   }
 }
