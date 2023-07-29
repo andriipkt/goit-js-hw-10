@@ -1,0 +1,143 @@
+body {
+  background-image: linear-gradient(to right, #b8475d, #6a82fb);
+}
+
+select {
+  margin: 15px;
+  appearance: none;
+  border: 0;
+  outline: 0;
+  /* font: inherit; */
+  font-family: arial;
+  width: 35em;
+  height: 3em;
+  padding: 0 4em 0 1em;
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg)
+      no-repeat right 0.8em center / 1.4em,
+    linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.3) 3em,
+      rgba(255, 255, 255, 0.2) 3em
+    );
+  color: white;
+  border-radius: 0.25em;
+  box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 18px;
+  letter-spacing: 1;
+}
+
+.breed-select:hover {
+  opacity: 0.8;
+}
+
+option {
+  color: inherit;
+  background-color: #b8475d;
+}
+
+.error {
+  margin: 30px;
+  color: #000000;
+  font-family: arial;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 0.8;
+}
+
+.cat-image {
+  height: 640px;
+  margin: 15px;
+
+  border-radius: 2rem;
+  box-shadow: 0 0 30px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-container {
+  max-width: 500px;
+
+  margin: 30px;
+}
+
+.breed-name {
+  font-family: arial;
+  line-height: 1.25;
+  margin-bottom: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f2d2f7;
+}
+
+.description {
+  color: #000000;
+  font-family: arial;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  letter-spacing: 0.8;
+}
+
+.temperament {
+  color: #000000;
+  font-family: arial;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.6;
+  letter-spacing: 0.8;
+}
+
+.loader {
+  margin: 50px;
+  color: #ffffff;
+  font-size: 45px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: relative;
+  transform: translateZ(0);
+  animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+@keyframes mltShdSpin {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  5%,
+  95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+  10%,
+  59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em,
+      -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em,
+      -0.297em -0.775em 0 -0.477em;
+  }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+      -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+      -0.749em -0.34em 0 -0.477em;
+  }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+      -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+      -0.82em -0.09em 0 -0.477em;
+  }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+      0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+  }
+}
+
+@keyframes round {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
